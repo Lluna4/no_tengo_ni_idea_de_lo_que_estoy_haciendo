@@ -2,7 +2,7 @@ import socket
 import threading
 
 EADER = 64
-PORT = 5057
+PORT = 5060
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 FORMAT = "utf-8"
@@ -11,17 +11,17 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
 def cli(conn, addr):
-    while True:
-        
-        
-        with open("image.jpeg", "rb") as tt:
-            data = tt.read(1024)
-            while data:
-                print("enviando")
-                conn.send(data)
-                data = tt.read(1024)
     
-            conn.send(b"done")
+        
+    with open("lol.mp4", "rb") as tt:
+        data = tt.read(1024)
+        while data:
+            print("enviando")
+            conn.send(data)
+            data = tt.read(1024)
+
+        conn.send(b"done")
+    quit()
 
 
 def start():

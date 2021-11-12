@@ -9,7 +9,7 @@ import time
 
 
 HEADER = 64
-PORT = 5057
+PORT = 5060
 FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "!desconectar"
 SERVER = socket.gethostbyname(socket.gethostname())
@@ -20,7 +20,7 @@ cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 cliente.connect(ADDR)
 conectado = True
 
-with open("test2.jpeg", "wb") as t1:
+with open("test2.mp4", "wb") as t1:
 
 
     while True:
@@ -30,4 +30,5 @@ with open("test2.jpeg", "wb") as t1:
             print("se acabó")
             break
         t1.write(data)
+    quit()
 
